@@ -1,0 +1,45 @@
+<html ng-app="social">
+
+
+<head>
+</head>
+
+
+<body>
+
+<h2>Hello World!</h2>
+
+<div id="container">
+  <post ng-repeat="p in $ctrl.posts" title="p.title" body="p.body"></post>
+
+    <social-posts></social-posts>
+      <post-form></post-form>
+<!--New Post-->
+<button ng-click="postForm.show()">New Thought</button>
+
+
+
+<input type="text" ng-model="newPost.post.title" ng-hide=
+
+"text=true" placeholder="Title"/>
+<input type="text" ng-model="newPost.post.body" ng-hide=
+
+"text=true" placeholder="Thought"/>
+<button ng-click="post.addPost(post.newPost)" ng-hide="text=true">Add</button>
+
+</div>
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+<script src="module.js"></script>
+<script src="socialPosts.js"></script> <!-- parent -->
+<script src="post.js"></script>
+<script src="postForm.js"></script>
+
+
+</body>
+
+
+</html>
